@@ -49,5 +49,8 @@ namespace DependencyInjectorBenchmarks
 
         [Benchmark]
         public ISingleton Grace() => GraceBenchmark.Instance.ResolveSingleton();
+
+        [Benchmark(Description = "IoC.Container")]
+        public ISingleton IoCContainer() => IoCContainerBenchmark.Instance.ResolveSingleton();
     }
 }

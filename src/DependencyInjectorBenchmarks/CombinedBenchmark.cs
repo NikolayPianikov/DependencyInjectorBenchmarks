@@ -49,5 +49,8 @@ namespace DependencyInjectorBenchmarks
 
         [Benchmark]
         public ICombined Grace() => GraceBenchmark.Instance.ResolveCombined();
+
+        [Benchmark(Description = "IoC.Container")]
+        public ICombined IoCContainer() => IoCContainerBenchmark.Instance.ResolveCombined();
     }
 }

@@ -49,5 +49,8 @@ namespace DependencyInjectorBenchmarks
 
         [Benchmark]
         public ITransient Grace() => GraceBenchmark.Instance.ResolveTransient();
+
+        [Benchmark(Description = "IoC.Container")]
+        public ITransient IoCContainer() => IoCContainerBenchmark.Instance.ResolveTransient();
     }
 }
